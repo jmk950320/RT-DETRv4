@@ -45,6 +45,7 @@ def main(args, ) -> None:
             cfg.yaml_cfg['HGNetv2']['pretrained'] = False
 
     print('cfg: ', cfg.__dict__)
+    print("task : ", cfg.yaml_cfg['task'])
 
     solver = TASKS[cfg.yaml_cfg['task']](cfg)
 
